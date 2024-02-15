@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 100vh;
+        }
+        #main{
+            border: solid;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+       
+        #btn button{
+            position: absolute;
+            display: flex;
+            cursor: pointer;
+            margin: 0 10px;
+            padding: 10px 30px;
+
+        }
+        #no{
+            right: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <h1>Sagutin mo na ako</h1>
+        <div id="btn">
+            <a href="answer.html"><button id="yes">Tayo na</button></a>
+            
+            <button id="no">Ayaw</button>
+            <p id="sagot"></p>
+        </div>
+    </div>
+    <script>
+        const yes = document.getElementById('yes')
+        const no = document.getElementById('no')
+        const sagot = document.getElementById('sagot')
+
+        no.addEventListener('click',()=>{
+            const no = document.getElementById('no')
+            const i = Math.floor(Math.random()*200)+1;
+            const j = Math.floor(Math.random()*200)+1;
+            const letter = ['bleeh', 'pagod ka na', 'pindot pa HAHAHA']
+            let randomItem = letter[Math.floor(Math.random() * letter.length)];
+            no.style.left = i + 'px';
+            no.style.top = j + 'px'
+            no.innerHTML("djh")
+        })
+    </script>
+</body>
+</html>
